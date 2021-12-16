@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import useSWR from "swr";
 
 interface Props {
-  slug: string;
+  slug: any;
 }
 
 const ViewCounter = ({ slug }: Props) => {

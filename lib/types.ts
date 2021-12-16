@@ -12,7 +12,7 @@ export type About = {
 export type Content = {
 	publishedAt: string;
 	title: string;
-	slug: {current: string};
+	slug: {current: any};
 	summary: string;
 	main: any;
 	readingTime: string;
