@@ -19,6 +19,6 @@ export type Content = {
 	count: number;
 }
 
-export type Views {
+export type Views = {
 	count: number;
   }
