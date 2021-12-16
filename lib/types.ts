@@ -14,7 +14,7 @@ export type Content = {
 	title: string;
 	slug: {current: string};
 	summary: string;
-	main: string;
+	main: any;
 	readingTime: string;
 	count: number;
 }
