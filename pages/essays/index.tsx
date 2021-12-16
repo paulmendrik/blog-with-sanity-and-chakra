@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import { Content } from "../../lib/types";
 import Essays from "../../components/layout/essays";
+import { Box } from '@chakra-ui/react';
 import client from "../../lib/sanity";
 
 type Props = {
@@ -22,6 +23,7 @@ return (
 {essays.map((essay) => (
 <Essays props={essay} />
 ))}
+<Box h="50vh"></Box>
 </Layout>
 </Fragment>
 

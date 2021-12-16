@@ -45,7 +45,7 @@ return (
 </Link>
 }
 
-<Text fontSize="1rem" lineHeight="1.75" color={text} noOfLines={3}>
+<Text fontSize="1rem" lineHeight="1.75" color={text} noOfLines={5}>
 {props.summary}
 </Text>
 
