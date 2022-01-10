@@ -21,10 +21,10 @@ justifyContent="center"
 <Flex>
 <Fragment>
 <BackButton/>
-<PageButton><Link  onClick={() => router.push('/articles/page=1')} fontSize="1rem"><a>1</a></Link></PageButton>
-<PageButton><Link  onClick={() => router.push('/articles/page=2')} fontSize="1rem"><a>2</a></Link></PageButton>
-<PageButton><Link  onClick={() => router.push('/articles/page=3')} fontSize="1rem"><a>3</a></Link></PageButton>
-<PageButton><Link  onClick={() => router.push('/articles/page=4')} fontSize="1rem"><a>4</a></Link></PageButton>
+<PageButton><Link  onClick={() => router.push('/articles/page=1')} fontFamily= "IBM Plex Mono" fontSize="1rem"><a>1</a></Link></PageButton>
+<PageButton><Link  onClick={() => router.push('/articles/page=2')} fontFamily= "IBM Plex Mono" fontSize="1rem"><a>2</a></Link></PageButton>
+<PageButton><Link  onClick={() => router.push('/articles/page=3')} fontFamily= "IBM Plex Mono" fontSize="1rem"><a>3</a></Link></PageButton>
+<PageButton><Link  onClick={() => router.push('/articles/page=4')} fontFamily= "IBM Plex Mono" fontSize="1rem"><a>4</a></Link></PageButton>
 <NextButton />
 </Fragment>
 </Flex>

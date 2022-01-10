@@ -4,7 +4,6 @@ import Layout from '../components/layout';
 import { Box, HStack, Heading, Text} from '@chakra-ui/react';
 import BlockContent from '@sanity/block-content-to-react';
 import { About } from "../lib/types";
-import '@fontsource/pt-serif';
 import client from "../lib/sanity";
 
 type Props = {
@@ -18,15 +17,15 @@ const About = ({ page }) => {
     <Layout>
     <HStack>
     {page.map((about, index) => (
-    <Box as="article">
+    <Box as="article" fontWeight="600">
     <Heading 
     as="h1" 
     pb="3rem"
     mt="2rem"
     mb="2rem"
     fontSize="3rem"
-    fontFamily="PT Serif"
-    fontWeight="300"
+    fontFamily= "IBM Plex Mono"
+    fontWeight="500"
     lineHeight="1.5"
     borderBottom="1px"
     borderBottomColor="#E2E8F0"

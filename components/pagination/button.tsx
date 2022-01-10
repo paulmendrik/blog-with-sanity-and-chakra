@@ -9,7 +9,7 @@ return (
 <Square
 className="pagebutton"
 bg={useColorModeValue("white", "black")}
-color={useColorModeValue("#7d7d7d", "white")}
+color={useColorModeValue("#000000", "white")}
 >
 {props.children}
 </Square>

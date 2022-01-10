@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/api/index.js"  ],
+, "pages/api/index.js", "lib/transitions.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,14 +1,20 @@
 import '../styles/app.css';
+import "@fontsource/ibm-plex-mono";
 import { ChakraProvider } from '@chakra-ui/react';
+import { AnimatePresence } from "framer-motion";
 import theme from '../theme';
 import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }: AppProps) {
 
+function MyApp({ Component, pageProps }: AppProps) {
+  
   return (
-    <ChakraProvider resetCSS theme={theme}>
-    <Component {...pageProps} />
-    </ChakraProvider>
+  <AnimatePresence exitBeforeEnter  initial={false} >
+  <ChakraProvider resetCSS theme={theme}>
+  <Component {...pageProps} />
+  </ChakraProvider>
+  </AnimatePresence>
+
   )
 }
 

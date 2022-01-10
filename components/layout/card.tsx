@@ -24,37 +24,37 @@ return (
 <Flex py={4} width="100%"  alignItems="stretch" justifyContent="center" >
 <Box>
 
-<Text as="time" fontSize="1rem" lineHeight="3rem" letterSpacing="0.07rem" color={time}>
+<Text as="time" fontFamily= "IBM Plex Mono" fontSize="1rem" lineHeight="3rem" letterSpacing="0.07rem" color={time}>
 {dateFormat(Date.parse(props.publishedAt), 'd mmmm, yyyy')}
 </Text>
 
 {page === '/blog' ?
 <Link href={'blog/' + props.slug.current} >
-<Text as="h2" fontSize="2rem" cursor="pointer" textDecoration="none" color={link}>
+<Text as="h2" fontFamily= "IBM Plex Mono" fontSize="2rem" cursor="pointer" textDecoration="none" color={link}>
 {props.title}
 </Text>
 </Link>
 :
 <Link href={props.slug.current} >
-<Text as="h2" fontSize="2rem" cursor="pointer" textDecoration="none" color={link}>
+<Text as="h2" fontFamily= "IBM Plex Mono" fontSize="2rem" cursor="pointer" textDecoration="none" color={link}>
 {props.title}
 </Text>
 </Link>
 }
 
-<Text fontSize="1rem" lineHeight="1.75" color={text} noOfLines={2}>
+<Text fontSize="1rem" fontFamily= "IBM Plex Mono" lineHeight="1.75" color={text} noOfLines={2}>
 {props.summary}
 </Text>
 
 {page === '/blog' ?
 <Link href={`blog/` + props.slug.current}>
-<Text as="p" fontSize="1.05rem" color={text} cursor="pointer">
+<Text as="p" fontFamily= "IBM Plex Mono" fontSize="1.05rem" color={text} cursor="pointer">
 Read more <Icon marginTop={-0.5} as={ArrowForwardIcon} />
 </Text>
 </Link>
 :
 <Link href={props.slug.current}>
-<Text as="p" p={0} fontSize="1.05rem" fontWeight="500" color={text} cursor="pointer">
+<Text as="p" p={0} fontSize="1.05rem" fontFamily= "IBM Plex Mono" fontWeight="500" color={text} cursor="pointer">
 Read more <Icon marginTop={-0.5} as={ArrowForwardIcon} />
 </Text>
 </Link>

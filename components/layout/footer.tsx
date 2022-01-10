@@ -1,11 +1,8 @@
 import React, { Fragment } from 'react';
 import {
 Box,
-Icon,
-IconButton,
 Link,
-Text,
-VStack, 
+Text, 
 } from '@chakra-ui/react';
 import { EmailIcon } from '@chakra-ui/icons';
 
