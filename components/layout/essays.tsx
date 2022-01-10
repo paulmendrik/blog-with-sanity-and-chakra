@@ -57,7 +57,7 @@ Read more <Icon marginTop={-0.5} as={ArrowForwardIcon} />
 </Link>
 :
 <Link href={props.slug.current}>
-<Text as="p" p={0} fontWeight="900" fontSize="1.05rem" fontWeight="500" color={text} cursor="pointer">
+<Text as="p" p={0} fontWeight="900" fontSize="1.05rem" color={text} cursor="pointer">
 Read more <Icon marginTop={-0.5} as={ArrowForwardIcon} />
 </Text>
 </Link>
