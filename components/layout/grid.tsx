@@ -24,7 +24,7 @@ return (
 <Flex py={6} w="full" alignItems="center" justifyContent="center">
 <Flex>
 <Box  w={1/4} >
-<Text as="time" fontFamily="IBM Plex Mono" fontWeight="bold" fontSize="1rem" color="#222222" lineHeight="3rem" letterSpacing="0.07rem" color={time}>
+<Text as="time" fontFamily="IBM Plex Mono" fontWeight="bold" fontSize="1rem" lineHeight="3rem" letterSpacing="0.07rem" color={time}>
 {dateFormat(Date.parse(props.publishedAt), 'd mmmm, yyyy')}
 </Text>
 </Box>
