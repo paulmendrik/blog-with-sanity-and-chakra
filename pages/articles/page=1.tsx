@@ -19,27 +19,29 @@ return (
 
 
 <Fragment>
-<Head><title>The Spinozist - Blog</title></Head>
+<Head>
+<title>The Spinozist - Blog</title>
+<meta name="description" content="the Spinozist Blog" />
+</Head>
 <Layout>
 <Heading 
-    as="h1" 
-    pb="3rem"
-    mt="2rem"
-    mb="2rem"
-    w="100%"
-    fontSize="3rem"
-    fontFamily= "IBM Plex Mono"
-    fontWeight="600"
-    lineHeight="1.5"
-    textAlign="left"
-    borderBottom="1px"
-    borderBottomColor="#E2E8F0"
-    borderBottomStyle="solid"
+as="h1" 
+pb="1rem"
+mb="1rem"
+w="100%"
+fontSize="3rem"
+fontFamily= "IBM Plex Mono"
+fontWeight="600"
+lineHeight="1.5"
+textAlign="left"
+borderBottom="1px"
+borderBottomColor="#E2E8F0"
+borderBottomStyle="solid"
 >
 Latest Articles
 </Heading>
 {articles.map((article) => (
-<Grid props={article} />
+<Grid key={article.title} props={article} />
 ))}
 <Pagination />
 </Layout>

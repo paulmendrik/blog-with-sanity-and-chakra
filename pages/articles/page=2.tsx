@@ -18,10 +18,13 @@ return (
 
 
 <Fragment>
-<Head><title>The Spinozist - Blog</title></Head>
+<Head>
+<title>The Spinozist - Blog</title>
+<meta name="description" content="the Spinozist Blog" />
+</Head>
 <Layout>
 {articles.map((article) => (
-<Grid props={article} />
+<Grid key={article.title} props={article} />
 ))}
 <Pagination />
 </Layout>

@@ -17,9 +17,9 @@ return (
 <Layout>
 <Head>
 <title>The Spinozist - Home</title>
-<meta name="description" content="Meta description for the Home page" />
+<meta name="description" content="the Spinozist Home" />
 </Head>
-<Box key={page.title}> 
+<Box> 
 <Box
 className="index" 
 as="article"
@@ -27,7 +27,8 @@ py="2rem"
 borderTop="1px"
 borderTopColor="#E2E8F0"
 borderTopStyle="solid"
-fontWeight="600"
+fontFamily= "IBM Plex Mono"
+color="#222222"
 >
 <BlockContent blocks={page.main} />
 </Box>

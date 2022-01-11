@@ -13,37 +13,38 @@ type Props = {
 const About = ({ page }) => {
     return (
     <Fragment>
-    <Head><title>The Spinozist - About</title></Head>
     <Layout>
-    <HStack>
-    {page.map((about, index) => (
-    <Box as="article" fontWeight="600">
+    <Head>
+    <title>The Spinozist - About</title></Head>
+    <meta name="description" content="the Spinozist About" />
+    <Box>
     <Heading 
     as="h1" 
-    pb="3rem"
-    mt="2rem"
-    mb="2rem"
     fontSize="3rem"
     fontFamily= "IBM Plex Mono"
-    fontWeight="500"
     lineHeight="1.5"
     borderBottom="1px"
     borderBottomColor="#E2E8F0"
     borderBottomStyle="solid"
     >
-    {about.title}
+    {page.title}
     </Heading>
-    <BlockContent blocks={about.main}></BlockContent>
+    <Box  
+   as="article"
+   py="2rem" 
+   fontFamily= "IBM Plex Mono"
+   color="#222222"
+    >
+    <BlockContent blocks={page.main}></BlockContent>
     </Box>
-    ))}
-    </HStack>
+    </Box>
     </Layout>
     </Fragment>
     )
 }
 
 export async function getStaticProps() {
-    const query = '*[ _type == "pages" && title=="About"]'
+    const query = '*[ _type == "pages" && title=="About"][0]'
     const page = await client.fetch(query)
     return {
       props: { page },

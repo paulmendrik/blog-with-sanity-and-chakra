@@ -2,7 +2,7 @@ import React, { ReactNode, Fragment } from 'react';
 import { motion } from "framer-motion";
 import Header from '../header';
 import Footer from './footer';
-import { Center, Container, useColorModeValue } from '@chakra-ui/react';
+import { Container, useColorModeValue } from '@chakra-ui/react';
 
 
 interface Props {
