@@ -23,7 +23,7 @@ const menuBg = useColorModeValue("white", "black");
 
 return (
 <Fragment>
-<HStack className="mobile"  display={[ "block", "none"]} >
+<HStack pt={[2,0,0]} className="mobile"  display={[ "block", "none"]} >
 <Box as="button" className="mobile" onClick={toggleColorMode}>
 {colorMode === 'light' ?  <Icon as={BsSunFill} fontSize="20px"  /> : <Icon as={BsSun} fontSize="20px" />}
 </Box>
