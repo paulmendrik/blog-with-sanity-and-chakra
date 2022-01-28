@@ -8,6 +8,18 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none !important;
 }
 
+h3 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  line-height: 2 !important;
+}
+
+h4 {
+  font-size: 1.5rem !important;
+  font-weight: 900 !important;
+  line-height: 2 !important;
+}
+
 p, a {
 padding: 0.75rem 0;
 line-height: 1.5;
