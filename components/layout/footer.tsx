@@ -9,7 +9,7 @@ import { EmailIcon } from '@chakra-ui/icons';
 const Footer = () => {
     return (
     <Fragment>
-    <Box className="footer" textAlign="center">
+    <Box className="footer" fontFamily="729" fontWeight="700"  textAlign="center">
     <Link href="mailto:paul@imouse.net">
     <EmailIcon/>
     </Link>

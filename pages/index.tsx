@@ -31,7 +31,7 @@ py="2rem"
 borderTop="1px"
 borderTopColor="#E2E8F0"
 borderTopStyle="solid"
-fontFamily= "IBM Plex Mono"
+fontFamily= "729"
 color={text}
 >
 <BlockContent blocks={page.main} />
