@@ -4,7 +4,7 @@ import Layout from '../../components/layout';
 import { Content } from "../../lib/types";
 import Grid from "../../components/layout/grid";
 import Pagination from "../../components/pagination/pagination";
-import { Heading,  Text } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 import client from "../../lib/sanity";
 
 type Props = {
@@ -26,19 +26,18 @@ return (
 <Layout>
 <Heading 
 as="h1" 
-pb="1rem"
+py="1.5rem"
 mb="1rem"
 w="100%"
-fontSize={{base:"1.5rem", md:'2rem', lg: '3rem'}}
-fontFamily= "729"
-fontWeight="600"
-lineHeight="1.5"
+fontSize={{base:"1.5rem", md:'2rem', lg: '2rem'}}
+fontWeight="bold"
+lineHeight="1.6"
 textAlign="left"
 borderBottom="1px"
 borderBottomColor="#E2E8F0"
 borderBottomStyle="solid"
 >
-Latest Articles
+<strong>Latest Articles</strong>
 </Heading>
 {articles.map((article) => (
 <Grid key={article.title} props={article} />

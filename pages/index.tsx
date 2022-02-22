@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Layout from '../components/layout';
-import { Box, useColorModeValue } from '@chakra-ui/react';
+import { Box, Text, useColorModeValue } from '@chakra-ui/react';
 import { Home } from "../lib/types";
 import BlockContent from '@sanity/block-content-to-react';
 import client from "../lib/sanity";
@@ -11,31 +11,25 @@ type Props = {
 }
 
 function Index({ page }) {
-
-const time = useColorModeValue("#000000", "#D1D5DB")
-const link = useColorModeValue("#000000", "#F3F4F6")
 const text = useColorModeValue("#222222", "#D1D5DB")
 
 return (
 <Fragment>
-<Layout>
 <Head>
-<title>The Spinozist - Home</title>
-<meta name="description" content="the Spinozist Home" />
+<title>The Spinozist</title>
+<meta name="description" content="the Spinozist" />
 </Head>
-<Box> 
-<Box
-className="index" 
+<Layout>
+<Text as="div" className="intro" fontSize={{base:"1.6rem", md:'2rem', lg: '3rem'}} color={text}>
+<BlockContent blocks={page.intro} />
+</Text>
+<Box 
 as="article"
-py="2rem" 
-borderTop="1px"
-borderTopColor="#E2E8F0"
-borderTopStyle="solid"
-fontFamily= "729"
+py={{base:"1rem", md:'2rem', lg: '4rem'}}
+fontSize={{base:"1.6rem", md:'2rem', lg: '2.2rem'}}
 color={text}
 >
 <BlockContent blocks={page.main} />
-</Box>
 </Box>
 </Layout>
 </Fragment>

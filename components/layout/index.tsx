@@ -23,7 +23,11 @@ const color = useColorModeValue("black", "white")
 
 return (
 <Fragment>
-<Container  maxW="container.lg" centerContent>
+<Container 
+w={{base:"90%", md:'90%', lg: '100%'}}
+maxW="container.lg" 
+centerContent
+>
 <Header/>
 <motion.main
 initial="hidden"

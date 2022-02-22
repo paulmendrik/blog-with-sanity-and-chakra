@@ -25,10 +25,6 @@ const breakpoints = createBreakpoints({
   })
 
 const theme = extendTheme({
-  fonts: {
-    heading: "Libre Franklin",
-    body: "729, iA Writer Duospace"
-  },
   config,
   breakpoints,
   colors,

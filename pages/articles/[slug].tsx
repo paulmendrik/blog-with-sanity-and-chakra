@@ -6,7 +6,7 @@ import ViewCounter from "../../components/layout/counter";
 import { Content } from "../../lib/types";
 import BlockContent from '@sanity/block-content-to-react';
 import { blockContentToPlainText } from "react-portable-text"
-import {Avatar,Box,Grid,GridItem, Heading,  Text } from '@chakra-ui/react';
+import {Avatar,Box,Grid,GridItem, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import readingTime from 'reading-time';
 import client from "../../lib/sanity";
 import { getArticle, getArticleBySlug } from "../../lib/api";
@@ -17,6 +17,7 @@ type Props = {
 
 const Post = ({ article }: Props) => {
 
+const text = useColorModeValue("#222222", "#D1D5DB")
             
 return (
 <Fragment>
@@ -26,18 +27,14 @@ return (
 <Layout>
 <Box>
 <Heading
-as="h2"
-py="1.25rem" 
-fontFamily= "IBM Plex Mono"
-fontSize={{base:"1.5rem", md:'2rem', lg: '2rem'}}
-lineHeight="1.5"
-borderBottom="1px"
-borderBottomColor="#E2E8F0"
-borderBottomStyle="solid"
+as="h1"
+className="title"
+fontSize={{base:"2rem", md:'3rem', lg: '3.75rem'}}
 >
 {article.title}
+</Heading>
 
-<Box  pt="2rem">
+<Box className="meta"  pt="1rem" fontSize={{base:"1rem", md:'1.25rem', lg: '1.75rem'}}>
 <Grid 
 templateColumns='repeat(2, 1fr)' 
 templateRows='repeat(1, 1ft)'
@@ -45,34 +42,24 @@ gap={2}
 >
 <GridItem
 colStart={1}
-fontFamily= "IBM Plex Mono"
-fontSize={['xs', 'xs', 'sm', 'sm']}
-fontWeight="bold"
-lineHeight="1.5"
-letterSpacing="0.07rem"
-display={{base:"none", md:"block", lg:"block" }} 
 >
-<Avatar name="Paul Mendrik" size="xs" src="/avatar.png" border="1px solid textPrimary"  marginRight={2} />
-
-Paul Mendrik / {dateFormat(Date.parse(article.publishedAt), 'd mmmm, yyyy')}
-
+{dateFormat(Date.parse(article.publishedAt), 'd.mm.yyyy')}
 </GridItem>
 <GridItem
 colEnd={6}
-fontFamily= "IBM Plex Mono"
-fontSize={['xs', 'xs', 'sm', 'sm']}
-fontWeight="bold"
-lineHeight="1.5rem" 
 >
 {readingTime(blockContentToPlainText(article.main)).text} &bull; <ViewCounter slug={article.slug}  /> 
 </GridItem>
 </Grid>
 </Box>
-</Heading>
+<Text as="div" className="intro" fontSize={{base:"1.6rem", md:'2rem', lg: '3rem'}} color={text}>
+<BlockContent blocks={article.intro} />
+</Text>
 <Box  
 as="article"
-py="2rem" 
-fontFamily= "IBM Plex Mono"
+py={{base:"1rem", md:'2rem', lg: '4rem'}}
+fontSize={{base:"1.6rem", md:'2rem', lg: '2.2rem'}}
+color={text}
 >
 <BlockContent blocks={article.main}></BlockContent>
 </Box>

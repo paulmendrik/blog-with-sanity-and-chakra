@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import { Content } from "../../lib/types";
 import Essays from "../../components/layout/essays";
-import { Box } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import client from "../../lib/sanity";
 
 type Props = {
@@ -18,8 +18,11 @@ return (
 
 
 <Fragment>
-<Head><title>The Spinozist - Blog</title></Head>
+<Head><title>The Spinozist - Essays</title></Head>
 <Layout>
+<Heading as="h1" className="heading" fontSize={{base:"2rem", md:'2rem', lg: '2.8rem'}} >
+<strong>Essays. </strong> Long read articles on a variety of subjects and observations.
+</Heading>
 {essays.map((essay) => (
 <Essays props={essay} />
 ))}

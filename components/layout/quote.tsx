@@ -10,7 +10,7 @@ const Quote = ({ quote }: Props) => {
 return (
 <Fragment>
 <Box as="blockquote">
-<Text fontFamily= "IBM Plex Mono" fontSize="1.25rem">
+<Text fontSize="1.25rem">
 <BlockContent blocks={quote} />
 </Text>
 </Box>

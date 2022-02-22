@@ -6,7 +6,7 @@ import ViewCounter from "../../components/layout/counter";
 import { Content } from "../../lib/types";
 import BlockContent from '@sanity/block-content-to-react';
 import { blockContentToPlainText } from "react-portable-text"
-import {Avatar,Box,Grid,GridItem, Heading,  Text } from '@chakra-ui/react';
+import {Box,Grid,GridItem, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import readingTime from 'reading-time';
 import client from "../../lib/sanity";
 import { getEssays, getEssayBySlug } from "../../lib/api";
@@ -17,59 +17,46 @@ type Props = {
 
 const Essay = ({ essay }: Props) => {
 
+const text = useColorModeValue("#222222", "#D1D5DB")
             
 return (
 <Fragment>
 <Head><title>The Spinozist - {essay.title} </title></Head>
 <Layout>
-<Box as="article">
+<Box>
 <Heading 
-pb="1.25rem"
-mt="2rem"
-mb="2rem"
-borderBottom="1px"
-borderBottomColor="#E2E8F0"
-borderBottomStyle="solid"
->
-<Text 
 as="h1"
-py="1.25rem"
-fontSize="2.25rem"
-fontWeight="500"
-lineHeight="1.5"
+className="title"
+fontSize={{base:"2rem", md:'3rem', lg: '3.75rem'}}
 >
 {essay.title}
-</Text>
-<Box as="sub" py={6}>
+</Heading>
+
+<Box className="meta"  pt="1rem" fontSize={{base:"1rem", md:'1.25rem', lg: '1.75rem'}}>
 <Grid 
 templateColumns='repeat(2, 1fr)' 
 templateRows='repeat(1, 1ft)'
-gap={6}
+gap={2}
 >
-<GridItem
-colStart={1}
-fontSize={['xs', 'xs', 'sm', 'sm']}
-fontWeight="600"
-lineHeight="1.5"
-letterSpacing="0.07rem"
->
-<Avatar name="Paul Mendrik" size="xs" src="/avatar.png" border="1px solid textPrimary"  marginRight={2} />
-
-Paul Mendrik / {dateFormat(Date.parse(essay.publishedAt), 'd mmmm, yyyy')}
-
+<GridItem colStart={1} >
+{dateFormat(Date.parse(essay.publishedAt), 'd.mm.yyyy')}
 </GridItem>
-<GridItem
-colEnd={6}
-fontSize={['xs', 'xs', 'sm', 'sm']}
-fontWeight="600"
-lineHeight="1.5rem" 
->
+<GridItem colEnd={6} >
 {readingTime(blockContentToPlainText(essay.main)).text} &bull; <ViewCounter slug={essay.slug}  /> 
 </GridItem>
 </Grid>
 </Box>
-</Heading>
+<Text className='intro' fontSize={{base:"1.6rem", md:'2rem', lg: '3rem'}}  color={text}>
+<BlockContent blocks={essay.intro} />
+</Text>
+<Box  
+as="article"
+py={{base:"1rem", md:'2.2rem', lg: '4rem'}}
+fontSize={{base:"1.6rem", md:'2rem', lg: '2.4rem'}}
+color={text}
+>
 <BlockContent blocks={essay.main}></BlockContent>
+</Box>
 </Box>
 </Layout>
 </Fragment>
