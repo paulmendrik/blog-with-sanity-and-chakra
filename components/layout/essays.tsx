@@ -6,7 +6,6 @@ import { Box, Divider, Flex, Icon, Text, useColorModeValue } from '@chakra-ui/re
 import { Content } from "../../lib/types";
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 
-
 type Props = {
     props: Content;
 }
@@ -51,14 +50,12 @@ return (
 <Link href={`essays/` + props.slug.current}>
 <Text className='summary' fontSize={{base:"1.6rem", md:'1.8rem', lg: '2.2rem'}}  color={text} noOfLines={[4,3,4]}>
 {props.summary}
-<span className='more'>-></span>
 </Text>
 </Link>
 :
 <Link href={props.slug.current}>
 <Text className='summary' fontSize={{base:"1.6rem", md:'1.8rem', lg: '2.2rem'}}  color={text} noOfLines={[4,3,4]}>
 {props.summary}
-<span className='more'>-></span>
 </Text>
 </Link>
 }
@@ -71,7 +68,7 @@ return (
 </Link>
 :
 <Link href={props.slug.current}>
-<Text className='more' fontSize={{base:"1.6rem", md:'1.8rem', lg: '2.2rem'}}  color={text} >
+<Text className='more' fontSize={{base:"1.6rem", md:'1.8rem', lg: '2rem'}}  color={text} >
 Read More<Icon marginTop={-0.5} as={ArrowForwardIcon} /> 
 </Text>  
 </Link>

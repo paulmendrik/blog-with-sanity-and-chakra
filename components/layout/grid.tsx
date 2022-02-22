@@ -55,27 +55,25 @@ w={{base:"100%", md: "67%", lg: "67%"}}
 <Link href={`articles/` + props.slug.current}>
 <Text className='summary' fontSize={{base:"1.6rem", md:'1.8rem', lg: '2.2rem'}}  color={text} noOfLines={[4,3,4]}>
 {props.summary}
-<span className='more'>-></span>
 </Text>
 </Link>
 :
 <Link href={props.slug.current}>
 <Text className='summary' fontSize={{base:"1.6rem", md:'1.8rem', lg: '2.2rem'}}  color={text} noOfLines={[4,3,4]}>
 {props.summary}
-<span className='more'>-></span>
 </Text>
 </Link>
 }
 
 {page === '/articles' ?
 <Link href={`articles/` + props.slug.current}>
-<Text className='more' fontSize={{base:"1.4rem", md:'1.6rem', lg: '2rem'}}  color={text} >
+<Text className='more' fontSize={{base:"1.6rem", md:'1.8rem', lg: '1.8rem'}}  color={text} >
  Read More<Icon marginTop={-0.5} as={ArrowForwardIcon} />
 </Text>
 </Link>
 :
 <Link href={props.slug.current}>
-<Text className='more' fontSize={{base:"1.6rem", md:'1.8rem', lg: '2.2rem'}}  color={text} >
+<Text className='more' fontSize={{base:"1.6rem", md:'1.8rem', lg: '1.8rem'}}  color={text} >
 Read More<Icon marginTop={-0.5} as={ArrowForwardIcon} /> 
 </Text>  
 </Link>

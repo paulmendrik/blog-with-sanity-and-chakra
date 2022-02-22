@@ -104,11 +104,13 @@ p.summary {
 }
 
 p.more {
+  margin-top: 1rem !important;
   font-variation-settings: 'wght' 600 !important;
-  line-height: 2 !important;
+  line-height: 1 !important;
   cursor: pointer !important;
   text-decoration: none !important;
 }
+
 
 a:hover {
   text-decoration: none !important;
