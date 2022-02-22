@@ -20,7 +20,7 @@ return (
 <meta name="description" content="the Spinozist" />
 </Head>
 <Layout>
-<Text as="div" className="intro" fontSize={{base:"1.6rem", md:'2rem', lg: '3rem'}} color={text}>
+<Text as="div" className="intro" fontSize={{base:"2rem", md:'2.4rem', lg: '3rem'}} color={text}>
 <BlockContent blocks={page.intro} />
 </Text>
 <Box 

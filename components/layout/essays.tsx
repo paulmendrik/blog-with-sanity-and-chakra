@@ -23,7 +23,10 @@ return (
 <Flex py={6} w="full" alignItems="center" justifyContent="center">
 <Flex>
 
-<Box  w={1/3} display={{base:"none", md:"block", lg:"block" }}>
+<Box  
+w={{base:"100%", md: "33%", lg: "33%"}} 
+display={{base:"block", md:"block", lg:"block" }}
+>
 
 {page === '/essays' ?
 <Link href={'essays/' + props.slug.current} >
@@ -39,12 +42,14 @@ return (
 </Link>
 }
 
-<Text as="time" fontSize={{base:"1.6rem", md:'1.8rem', lg: '2.2rem'}} color={time}>
+<Text as="time" fontSize={{base:"1.6rem", md:'1.8rem', lg: '2rem'}} color={time}>
 {dateFormat(Date.parse(props.publishedAt), 'dd.mm.yyyy')}
 </Text>
 </Box>
 
-<Box w={2/3}>
+<Box 
+w={{base:"100%", md: "67%", lg: "67%"}} 
+>
     
 {page === '/essays' ?
 <Link href={`essays/` + props.slug.current}>
@@ -62,13 +67,13 @@ return (
 
 {page === '/essays' ?
 <Link href={`essays/` + props.slug.current}>
-<Text className='more' fontSize={{base:"1.4rem", md:'1.6rem', lg: '2rem'}}  color={text} >
+<Text className='more' fontSize={{base:"1.6rem", md:'1.8rem', lg: '1.8rem'}}  color={text} >
  Read More<Icon marginTop={-0.5} as={ArrowForwardIcon} />
 </Text>
 </Link>
 :
 <Link href={props.slug.current}>
-<Text className='more' fontSize={{base:"1.6rem", md:'1.8rem', lg: '2rem'}}  color={text} >
+<Text className='more' fontSize={{base:"1.6rem", md:'1.8rem', lg: '1.8rem'}}  color={text} >
 Read More<Icon marginTop={-0.5} as={ArrowForwardIcon} /> 
 </Text>  
 </Link>

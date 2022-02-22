@@ -24,7 +24,7 @@ const color = useColorModeValue("black", "white")
 return (
 <Fragment>
 <Container 
-w={{base:"90%", md:'90%', lg: '100%'}}
+px={{base:"2rem", md:'4rem', lg: '4rem'}}
 maxW="container.lg" 
 centerContent
 >

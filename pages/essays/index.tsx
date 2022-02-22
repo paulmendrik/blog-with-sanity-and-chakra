@@ -20,7 +20,7 @@ return (
 <Fragment>
 <Head><title>The Spinozist - Essays</title></Head>
 <Layout>
-<Heading as="h1" className="heading" fontSize={{base:"2rem", md:'2rem', lg: '2.8rem'}} >
+<Heading as="h1" className="heading" fontSize={{base:"2rem", md:'2rem', lg: '3rem'}} >
 <strong>Essays. </strong> Long read articles on a variety of subjects and observations.
 </Heading>
 {essays.map((essay) => (

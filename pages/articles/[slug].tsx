@@ -52,13 +52,13 @@ colEnd={6}
 </GridItem>
 </Grid>
 </Box>
-<Text as="div" className="intro" fontSize={{base:"1.6rem", md:'2rem', lg: '3rem'}} color={text}>
+<Text as="div" className="intro" fontSize={{base:"2rem", md:'2.4rem', lg: '3rem'}} color={text}>
 <BlockContent blocks={article.intro} />
 </Text>
 <Box  
 as="article"
 py={{base:"1rem", md:'2rem', lg: '4rem'}}
-fontSize={{base:"1.6rem", md:'2rem', lg: '2.2rem'}}
+fontSize={{base:"1.8rem", md:'2rem', lg: '2.2rem'}}
 color={text}
 >
 <BlockContent blocks={article.main}></BlockContent>

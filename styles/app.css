@@ -23,7 +23,7 @@ html {
 
 h1.heading {
   padding: 1.5rem 0 !important;
-  margin: 3rem 0 !important;
+  margin: 2rem 0 !important;
   width: 100% !important;
   font-variation-settings: 'wght' 500 !important;
   line-height: 1.6 !important;
@@ -67,7 +67,7 @@ h2.title {
 
 article {
   font-family: 'Heebo', sans-serif !important;
-  letter-spacing: .2rem !important;
+  letter-spacing: .03rem !important;
 }
 
 article p {
