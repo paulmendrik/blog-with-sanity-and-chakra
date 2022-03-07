@@ -34,7 +34,7 @@ return (
 
 export async function getStaticProps() {
 
-const query = '*[ _type == "articles"]|order(order)[0..7]'
+const query = '*[ _type == "articles"]| order(_createdAt desc)[0..7]'
 const articles = await client.fetch(query)
 return { props: { articles }, revalidate: 1 }
 }
