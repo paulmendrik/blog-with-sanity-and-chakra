@@ -23,8 +23,8 @@ return (
 <Heading as="h1" className="heading" fontSize={{base:"2rem", md:'2rem', lg: '3rem'}} >
 <strong>Articles. </strong>Essays on philosophical topics exploring life's big questions. 
 </Heading>
-{articles.map((article) => (
-<Grid props={article} />
+{articles.map((article, i) => (
+<Grid props={article} key={i} />
 ))}
 </Layout>
 </Fragment>
