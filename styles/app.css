@@ -87,6 +87,11 @@ article p strong {
   line-height: 3 !important;
 }
 
+ul {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
 ul li {
   list-style: inside !important;
   list-style-type: none !important;
