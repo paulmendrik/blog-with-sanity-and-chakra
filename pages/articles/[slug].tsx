@@ -6,7 +6,7 @@ import ViewCounter from "../../components/layout/counter";
 import { Content } from "../../lib/types";
 import BlockContent from '@sanity/block-content-to-react';
 import { blockContentToPlainText } from "react-portable-text"
-import {Avatar,Box,Grid,GridItem, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import {Box,Grid,GridItem, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import readingTime from 'reading-time';
 import client from "../../lib/sanity";
 import { getArticle, getArticleBySlug } from "../../lib/api";

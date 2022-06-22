@@ -4,7 +4,7 @@ import Layout from '../../components/layout';
 import dateFormat from 'dateformat';
 import ViewCounter from "../../components/layout/counter";
 import { Content } from "../../lib/types";
-import {PortableText} from '@portabletext/react'
+import BlockContent from '@sanity/block-content-to-react';
 import { blockContentToPlainText } from "react-portable-text"
 import {Box,Grid,GridItem, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import readingTime from 'reading-time';
