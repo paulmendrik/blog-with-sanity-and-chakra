@@ -14,7 +14,6 @@ html {
   -webkit-font-smoothing:antialiased;
 }
 
-
 .header {
   position: relative !important;
   width: 100% !important;
@@ -86,6 +85,10 @@ article p strong {
   padding-bottom: 3rem !important;
   font-variation-settings: 'wght' 600 !important;
   line-height: 3 !important;
+}
+
+article  ul li {
+  list-style: inside !important;
 }
 
 time {
